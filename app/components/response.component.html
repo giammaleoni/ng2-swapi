@@ -1,0 +1,25 @@
+<h3>Request</h3>
+<form>
+    <div class="form-group">
+      <label for="resources">Resources</label>
+      <select class="form-control" required [(ngModel)]="url.what" name="resources">
+          <option *ngFor="let r of resources" [value]="r">{{r}}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="index">Index</label>
+      <input type="number" [(ngModel)]="url.index" name="quantity" min="0" required>
+    </div>
+
+    <div class="form-group">
+      <input type="checkbox" name="wookie" [(ngModel)]="url.wookiee" /> Wookiee
+    </div>
+
+    <button type="submit" class="btn btn-default" (click)="onSubmit()">Submit</button>
+
+  </form>
+
+<h3>Response:</h3>
+<pre>{{ res | json}}</pre>
+<div style="color:red">{{ errorMessage }}</div>
