@@ -1,6 +1,7 @@
 # Angular2 Service for Star Wars API 
+# ATTENTION! Service & Documentation still in progress 
 
-It use [Star Wars API](https://swapi.co/) by Paul Hallet
+It uses [Star Wars API](https://swapi.co/) by Paul Hallet
 
 ## Installation
 - clone or fork the reporsitory
