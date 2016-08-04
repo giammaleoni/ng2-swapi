@@ -33,7 +33,6 @@ It uses [Star Wars API](https://swapi.co/) by Paul Hallet
 </pre>
 
 ## Documentation
----
 
 ### Methods available
 #### SwapiService.get(resource: string, index: number, wookiee: boolean)
@@ -50,7 +49,6 @@ Original documentation at [https://swapi.co/documentation](https://swapi.co/docu
 AngularJS version [here](https://github.com/unshift-devs/xyz-angular-swapi) by [unshift-devs](https://github.com/unshift-devs)
 
 ## Designer
----
 
 [Gianmaria Leoni](https://github.com/giammaleoni)
 
