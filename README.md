@@ -39,17 +39,14 @@ It uses [Star Wars API](https://swapi.co/) by Paul Hallet
 - resource: string 
 - index: number
 - wookiee: boolean
-
 It returns an object in `JSON` format
 
 ### Original documentation
----
 Original documentation at [https://swapi.co/documentation](https://swapi.co/documentation).
 
 AngularJS version [here](https://github.com/unshift-devs/xyz-angular-swapi) by [unshift-devs](https://github.com/unshift-devs)
 
 ## Designer
-
 [Gianmaria Leoni](https://github.com/giammaleoni)
 
 # ToDo
