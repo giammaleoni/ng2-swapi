@@ -39,7 +39,8 @@ It uses [Star Wars API](https://swapi.co/) by Paul Hallet
 - resource: string 
 - index: number
 - wookiee: boolean
-It returns an object in `JSON` format
+
+It returns an observable with response and error. The reponse is in `JSON` format
 
 ### Original documentation
 Original documentation at [https://swapi.co/documentation](https://swapi.co/documentation).
