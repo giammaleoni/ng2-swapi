@@ -1,9 +1,8 @@
 // Observable Version
-import { Injectable }     from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { Injectable }              from '@angular/core';
+import { Http, Response }          from '@angular/http';
 import { Headers, RequestOptions } from '@angular/http';
-
-import { Observable }     from 'rxjs/Observable';
+import { Observable }              from 'rxjs/Observable';
 
 @Injectable()
 export class SwapiService {
@@ -11,26 +10,115 @@ export class SwapiService {
 
   private baseUrl = 'https://swapi.co/api/';
 
-  get(what: string, index: number, wookiee: boolean): Observable<any> {
+  // "people": "http://swapi.co/api/people/",
+  // "planets": "http://swapi.co/api/planets/",
+  // "films": "http://swapi.co/api/films/",
+  // "species": "http://swapi.co/api/species/",
+  // "vehicles": "http://swapi.co/api/vehicles/",
+  // "starships": "http://swapi.co/api/starships/"
 
+  getRoot(wookiee: boolean = false): Observable<any> {
     let completeUrl: string = this.baseUrl;
-
-
-    if (what !== 'root') {
-      completeUrl += what + '/' + index + '/';
-    }
-
-    if (wookiee === true) {
-      completeUrl += '?format=wookiee'
-    }
-
-    console.log(completeUrl);
-
-    return this.http.get(completeUrl)
-      .map(this.extractData)
-      .catch(this.handleError);
+    if (wookiee) {completeUrl += '?format=wookiee'}
+    return this.getCall(completeUrl);
   }
 
+  getPeople(page: number = null, wookiee: boolean = false): Observable<any> {
+    let completeUrl: string = this.baseUrl + 'people/';
+    if (page || wookiee){ completeUrl += '?' }
+    if(page){completeUrl += 'page=' + page}
+    if (page && wookiee){ completeUrl += '&' }
+    if (wookiee) {completeUrl += 'format=wookiee'}
+    return this.getCall(completeUrl);
+  }
+
+  getPlanets(page: number = null, wookiee: boolean = false): Observable<any> {
+    let completeUrl: string = this.baseUrl + 'planets/';
+    if (page || wookiee){ completeUrl += '?' }
+    if(page){completeUrl += 'page=' + page}
+    if (page && wookiee){ completeUrl += '&' }
+    if (wookiee) {completeUrl += 'format=wookiee'}
+    return this.getCall(completeUrl);
+  }
+
+  getFilms(page: number = null, wookiee: boolean = false): Observable<any> {
+    let completeUrl: string = this.baseUrl + 'films/';
+    if (page || wookiee){ completeUrl += '?' }
+    if(page){completeUrl += 'page=' + page}
+    if (page && wookiee){ completeUrl += '&' }
+    if (wookiee) {completeUrl += 'format=wookiee'}
+    return this.getCall(completeUrl);
+  }
+
+  getSpecies(page: number = null, wookiee: boolean = false): Observable<any> {
+    let completeUrl: string = this.baseUrl + 'species/';
+    if (page || wookiee){ completeUrl += '?' }
+    if(page){completeUrl += 'page=' + page}
+    if (page && wookiee){ completeUrl += '&' }
+    if (wookiee) {completeUrl += 'format=wookiee'}
+    return this.getCall(completeUrl);
+  }
+
+  getVehicles(page: number = null, wookiee: boolean = false): Observable<any> {
+    let completeUrl: string = this.baseUrl + 'vehicles/';
+    if (page || wookiee){ completeUrl += '?' }
+    if(page){completeUrl += 'page=' + page}
+    if (page && wookiee){ completeUrl += '&' }
+    if (wookiee) {completeUrl += 'format=wookiee'}
+    return this.getCall(completeUrl);
+  }
+
+  getStarships(page: number = null, wookiee: boolean = false): Observable<any> {
+    let completeUrl: string = this.baseUrl + 'starships/';
+    if (page || wookiee){ completeUrl += '?' }
+    if(page){completeUrl += 'page=' + page}
+    if (page && wookiee){ completeUrl += '&' }
+    if (wookiee) {completeUrl += 'format=wookiee'}
+    return this.getCall(completeUrl);
+  }
+
+  getPerson(id: number, wookiee: boolean = false): Observable<any> {
+    let completeUrl: string = this.baseUrl + 'people/' + id + '/';
+    if (wookiee) {completeUrl += '?format=wookiee'}
+    return this.getCall(completeUrl);
+  }
+
+  getPlanet(id: number, wookiee: boolean = false): Observable<any> {
+    let completeUrl: string = this.baseUrl + 'planets/' + id + '/';
+    if (wookiee) {completeUrl += '?format=wookiee'}
+    return this.getCall(completeUrl);
+  }
+
+  getFilm(id: number, wookiee: boolean = false): Observable<any> {
+    let completeUrl: string = this.baseUrl + 'films/' + id + '/';
+    if (wookiee) {completeUrl += '?format=wookiee'}
+    return this.getCall(completeUrl);
+  }
+
+  getSpecie(id: number, wookiee: boolean = false): Observable<any> {
+    let completeUrl: string = this.baseUrl + 'species/' + id + '/';
+    if (wookiee) {completeUrl += '?format=wookiee'}
+    return this.getCall(completeUrl);
+  }
+
+  getVehicle(id: number, wookiee: boolean = false): Observable<any> {
+    let completeUrl: string = this.baseUrl + 'vehicles/' + id + '/';
+    if (wookiee) {completeUrl += '?format=wookiee'}
+    return this.getCall(completeUrl);
+  }
+
+  getStarship(id: number, wookiee: boolean = false): Observable<any> {
+    let completeUrl: string = this.baseUrl + 'starships/' + id + '/';
+    if (wookiee) {completeUrl += '?format=wookiee'}
+    return this.getCall(completeUrl);
+  }
+
+  private getCall(url: string){
+    console.log(url);
+    return this.http.get(url)
+    .map(this.extractData)
+    .catch(this.handleError);
+  }
 
   private extractData(res: Response) {
     let body = res.json();
@@ -41,7 +129,7 @@ export class SwapiService {
     // In a real world app, we might use a remote logging infrastructure
     // We'd also dig deeper into the error to get a better message
     let errMsg = (error.message) ? error.message :
-      error.status ? `${error.status} - ${error.statusText}` : 'Server error';
+    error.status ? `${error.status} - ${error.statusText}` : 'Server error';
     console.error(errMsg); // log to console instead
     return Observable.throw(errMsg);
   }

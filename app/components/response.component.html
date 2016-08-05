@@ -2,7 +2,7 @@
 <form>
     <div class="form-group">
       <label for="resources">Resources</label>
-      <select class="form-control" required [(ngModel)]="url.what" name="resources">
+      <select class="form-control" required [(ngModel)]="url.resource" name="resources">
           <option *ngFor="let r of resources" [value]="r">{{r}}</option>
       </select>
     </div>
