@@ -52,51 +52,60 @@ res = {
 ## Methods available
 ### Get Root
 ```
-SwapiService.getRoot(wookiee: boolean)
-.subscribe(
-  res =>  {},
-  err =>  {});
+swapi.getRoot(wookiee).subscribe(res =>  {},err =>  {});
 ```
 Attributes:
 - `wookiee` boolean (default: false) - wookiee translations
 
+Returns
+- `res` object - contain the response of the call
+- `err` object - contain the error if something wrong occurred
+
 ### Get People / Get Films / Get Starships / Get Vehicles / Get Species / Get Planets
 ```
-SwapiService.getPeople(page, wookiee).subscribe(res =>  {},err =>  {});
+swapi.getPeople(page, wookiee).subscribe(res =>  {},err =>  {});
 
-SwapiService.getFilms(page, wookiee).subscribe(res =>  {},err =>  {});
+swapi.getFilms(page, wookiee).subscribe(res =>  {},err =>  {});
 
-SwapiService.getStarships(page, wookiee).subscribe(res =>  {},err =>  {});
+swapi.getStarships(page, wookiee).subscribe(res =>  {},err =>  {});
 
-SwapiService.getVehicles(page, wookiee).subscribe(res =>  {},err =>  {});
+swapi.getVehicles(page, wookiee).subscribe(res =>  {},err =>  {});
 
-SwapiService.getSpecies(page, wookiee).subscribe(res =>  {},err =>  {});
+swapi.getSpecies(page, wookiee).subscribe(res =>  {},err =>  {});
 
-SwapiService.getPlanets(page, wookiee).subscribe(res =>  {},err =>  {});
+swapi.getPlanets(page, wookiee).subscribe(res =>  {},err =>  {});
 
 ```
 Attributes:
 - `page` number (default: null) - page number
 - `wookiee` boolean (default: false) - wookiee translations
 
+Returns
+- `res` object - contain the response of the call
+- `err` object - contain the error if something wrong occurred
+
 ### Get Person / Get Film / Get Starship / Get Vehicle / Get Specie / Get Planet
 ```
-SwapiService.getPeople(id, wookiee).subscribe(res =>  {},err =>  {});
+swapi.getPeople(id, wookiee).subscribe(res =>  {},err =>  {});
 
-SwapiService.getFilms(id, wookiee).subscribe(res =>  {},err =>  {});
+swapi.getFilms(id, wookiee).subscribe(res =>  {},err =>  {});
 
-SwapiService.getStarships(id, wookiee).subscribe(res =>  {},err =>  {});
+swapi.getStarships(id, wookiee).subscribe(res =>  {},err =>  {});
 
-SwapiService.getVehicles(id, wookiee).subscribe(res =>  {},err =>  {});
+swapi.getVehicles(id, wookiee).subscribe(res =>  {},err =>  {});
 
-SwapiService.getSpecies(id, wookiee).subscribe(res =>  {},err =>  {});
+swapi.getSpecies(id, wookiee).subscribe(res =>  {},err =>  {});
 
-SwapiService.getPlanets(id, wookiee).subscribe(res =>  {},err =>  {});
+swapi.getPlanets(id, wookiee).subscribe(res =>  {},err =>  {});
 
 ```
 Attributes:
 - `id` number (mandatory) - `:id` of the resource
 - `wookiee` boolean (default: false) - wookiee translations
+
+Returns
+- `res` object - contain the response of the call
+- `err` object - contain the error if something wrong occurred
 
 ### Original documentation
 Original documentation at [https://swapi.co/documentation](https://swapi.co/documentation).
