@@ -1,10 +1,11 @@
 {
   "name": "ng2-swapi",
-  "version": "1.0.0-rc.6",
+  "version": "1.0.0-rc.8",
   "description": "Angular2 Service for Star Wars API",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "pubblica": "npm publish"
   },
   "repository": {
     "type": "git",
