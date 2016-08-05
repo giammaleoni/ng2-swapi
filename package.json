@@ -1,6 +1,6 @@
 {
   "name": "ng2-swapi",
-  "version": "1.0.0-rc.2",
+  "version": "1.0.0-rc.6",
   "description": "Angular2 Service for Star Wars API",
   "main": "index.js",
   "scripts": {
