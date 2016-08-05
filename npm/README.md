@@ -29,7 +29,7 @@ It uses [Star Wars API](https://swapi.co/) by Paul Hallet
 ```
     constructor (private swapi: SwapiService) {}
 ```
-4. Call the desired method [(other available methods)](#method-available)
+4. Call the desired method [(other available methods)](#methods-available)
 ```
 // Example of using
 // Correspond to http://swapi.co/api/people/3/
