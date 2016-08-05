@@ -1,9 +1,10 @@
 # Angular2 Service for Star Wars API
+# ATTENTION! Service & Documentation still in progress
 
-It use [Star Wars API](https://swapi.co/) by Paul Hallet
+It uses [Star Wars API](https://swapi.co/) by Paul Hallet
 
 ## Installation
-- clone or fork the reporsitory
+- clone or fork the repository
 - `cd` in your project
 - run http server (install with `npm install http-server -g`)
 - open browser
@@ -56,7 +57,8 @@ Variables:
 - `page: number = null`
 - `wookiee: boolean = false`
 
-It returns an object in `JSON` format
+It returns an observable with response and error. The reponse is in `JSON` format
+
 
 ### Original documentation
 Original documentation at [https://swapi.co/documentation](https://swapi.co/documentation).
@@ -64,13 +66,10 @@ Original documentation at [https://swapi.co/documentation](https://swapi.co/docu
 AngularJS version [here](https://github.com/unshift-devs/xyz-angular-swapi) by [unshift-devs](https://github.com/unshift-devs)
 
 ## Designer
----
-
 [Gianmaria Leoni](https://github.com/giammaleoni)
 
 # ToDo
 - Get Schema
-- Get All resources
 - Complete documentation
 - Testing
 - Full working example
