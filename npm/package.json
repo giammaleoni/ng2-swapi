@@ -1,0 +1,24 @@
+{
+  "name": "ng2-swapi",
+  "version": "1.0.0-rc.1",
+  "description": "Angular2 Service for Star Wars API",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giammaleoni/ng2-swapi.git"
+  },
+  "keywords": [
+    "angular2",
+    "api",
+    "swapi"
+  ],
+  "author": "Gianmaria Leoni <gianmaria.leoni@gmail.com> (https://github.com/giammaleoni)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/giammaleoni/ng2-swapi/issues"
+  },
+  "homepage": "https://github.com/giammaleoni/ng2-swapi#readme"
+}

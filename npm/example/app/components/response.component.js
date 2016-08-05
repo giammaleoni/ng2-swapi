@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 // Observable Version
 var core_1 = require('@angular/core');
-var swapi_service_1 = require('../services/swapi.service');
+var ng2_swapi_1 = require('ng2-swapi');
 var endpoint_1 = require('./endpoint');
 var ResponseComponent = (function () {
     function ResponseComponent(swapi) {
@@ -76,12 +76,16 @@ var ResponseComponent = (function () {
                     .subscribe(function (res) { _this.res = res; _this.errorMessage = ''; }, function (err) { _this.res = {}; _this.errorMessage = err; });
                 break;
             case this.resources[10]:
-                this.swapi.getPeople(req.index, req.wookiee)
+                this.swapi.getVehicle(req.index, req.wookiee)
                     .subscribe(function (res) { _this.res = res; _this.errorMessage = ''; }, function (err) { _this.res = {}; _this.errorMessage = err; });
                 break;
             case this.resources[11]:
+                this.swapi.getSpecie(req.index, req.wookiee)
+                    .subscribe(function (res) { _this.res = res; _this.errorMessage = ''; }, function (err) { _this.res = {}; _this.errorMessage = err; });
                 break;
             case this.resources[12]:
+                this.swapi.getPlanet(req.index, req.wookiee)
+                    .subscribe(function (res) { _this.res = res; _this.errorMessage = ''; }, function (err) { _this.res = {}; _this.errorMessage = err; });
                 break;
             default:
                 break;
@@ -99,9 +103,9 @@ var ResponseComponent = (function () {
         core_1.Component({
             selector: 'response',
             templateUrl: 'app/components/response.component.html',
-            providers: [swapi_service_1.SwapiService]
+            providers: [ng2_swapi_1.SwapiService]
         }), 
-        __metadata('design:paramtypes', [swapi_service_1.SwapiService])
+        __metadata('design:paramtypes', [ng2_swapi_1.SwapiService])
     ], ResponseComponent);
     return ResponseComponent;
 }());

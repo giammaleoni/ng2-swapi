@@ -1,21 +1,18 @@
 // Observable Version
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { NgForm }    from '@angular/forms';
-import { SwapiService } from '../services/swapi.service';
+import { SwapiService } from 'ng2-swapi';
 import { Endpoint } from './endpoint';
-
-
 
 @Component({
   selector: 'response',
   templateUrl: 'app/components/response.component.html',
   providers: [ SwapiService ]
 })
-export class ResponseComponent implements OnInit {
+export class ResponseComponent {
   errorMessage: string;
   res: {};
   root: {};
-
   resources = [
     'root',
     'people',
