@@ -27,6 +27,12 @@ export class ResponseComponent {
     'vehicle',
     'specie',
     'planet',
+    'person schema',
+    'film schema',
+    'starship schema',
+    'vehicle shcema',
+    'specie schema',
+    'planet schema'
   ];
   url = new Endpoint();
 
@@ -110,6 +116,42 @@ export class ResponseComponent {
         break;
       case this.resources[12]:
         this.swapi.getPlanet(req.index, req.wookiee)
+        .subscribe(
+          res =>  {this.res = res; this.errorMessage = ''},
+          err =>  {this.res = {};  this.errorMessage = <any>err});
+        break;
+      case this.resources[13]:
+        this.swapi.getPersonSchema()
+        .subscribe(
+          res =>  {this.res = res; this.errorMessage = ''},
+          err =>  {this.res = {};  this.errorMessage = <any>err});
+        break;
+      case this.resources[14]:
+        this.swapi.getFilmSchema()
+        .subscribe(
+          res =>  {this.res = res; this.errorMessage = ''},
+          err =>  {this.res = {};  this.errorMessage = <any>err});
+        break;
+      case this.resources[15]:
+        this.swapi.getStarshipSchema()
+        .subscribe(
+          res =>  {this.res = res; this.errorMessage = ''},
+          err =>  {this.res = {};  this.errorMessage = <any>err});
+        break;
+      case this.resources[16]:
+        this.swapi.getVehicleSchema()
+        .subscribe(
+          res =>  {this.res = res; this.errorMessage = ''},
+          err =>  {this.res = {};  this.errorMessage = <any>err});
+        break;
+      case this.resources[17]:
+        this.swapi.getSpecieSchema()
+        .subscribe(
+          res =>  {this.res = res; this.errorMessage = ''},
+          err =>  {this.res = {};  this.errorMessage = <any>err});
+        break;
+      case this.resources[18]:
+        this.swapi.getPlanetSchema()
         .subscribe(
           res =>  {this.res = res; this.errorMessage = ''},
           err =>  {this.res = {};  this.errorMessage = <any>err});

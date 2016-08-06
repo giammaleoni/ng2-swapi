@@ -3,21 +3,34 @@
 
 It uses [Star Wars API](https://swapi.co/) by Paul Hallet
 
-## Dependencies
-- @angular/core
-- @angular/http
-- rxjs/Observable
-- http-server
-
 ## Installation
-- run `npm install ng2-swapi`
+Run `npm install ng2-swapi --save` to install and add to your dependencies
+
+### Installation optional
+Depending on your actual settings you may need to:
+- Add `ng2-swapi` path in your `map` object in `system.config.js`
+ ```
+ var map = {
+   'app':         'app',
+   ...
+   'ng2-swapi':   'node_modules/ng2-swapi'
+ };
+ ```
+- Add `ng2-swapi` package in your `packages` object in `system.config.js`
+  ```
+  var packages = {
+    'app':       { main: 'main.js',  defaultExtension: 'js' },
+    ...
+    'ng2-swapi': { main: 'index.js', defaultExtension: 'js' }
+  };
+  ```
 
 ## Using
 1.  Import SwapiService Component
 ```
     import { SwapiService } from './ng2-swapi';
 ```
-2. Add it in the provider array of the component
+2. Add it in the provider array of your component
 ```
     @Component({
         selector: 'my-custom-selector',
@@ -25,9 +38,11 @@ It uses [Star Wars API](https://swapi.co/) by Paul Hallet
         providers: [ SwapiService ]
     })
 ```
-3. Add an argument of type `SwapiService` to the constructor
+3. Add an argument of type `SwapiService` to your class  constructor
 ```
-    constructor (private swapi: SwapiService) {}
+export class myComponent {
+      constructor (private swapi: SwapiService) {}
+    }
 ```
 4. Call the desired method [(other available methods)](#methods-available)
 ```
@@ -59,7 +74,7 @@ Attributes:
 
 Returns
 - `res` object - contain the response of the call
-- `err` object - contain the error if something wrong occurred
+- `err` string - contain the error if something wrong occurred
 
 ### Get People / Get Films / Get Starships / Get Vehicles / Get Species / Get Planets
 ```
@@ -82,7 +97,7 @@ Attributes:
 
 Returns
 - `res` object - contain the response of the call
-- `err` object - contain the error if something wrong occurred
+- `err` string - contain the error if something wrong occurred
 
 ### Get Person / Get Film / Get Starship / Get Vehicle / Get Specie / Get Planet
 ```
@@ -105,7 +120,7 @@ Attributes:
 
 Returns
 - `res` object - contain the response of the call
-- `err` object - contain the error if something wrong occurred
+- `err` string - contain the error if something wrong occurred
 
 ### Original documentation
 Original documentation at [https://swapi.co/documentation](https://swapi.co/documentation).
@@ -116,7 +131,4 @@ AngularJS version [here](https://github.com/unshift-devs/xyz-angular-swapi) by [
 [Gianmaria Leoni](https://github.com/giammaleoni)
 
 # ToDo
-- Get Schema
-- Complete documentation
-- Testing
-- Full working example
+  - Testing

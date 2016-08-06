@@ -111,6 +111,36 @@ export class SwapiService {
     return this.getCall(completeUrl);
   }
 
+  getPersonSchema(): Observable<any> {
+    let completeUrl: string = this.baseUrl + 'people/schema';
+    return this.getCall(completeUrl);
+  }
+
+  getPlanetSchema(): Observable<any> {
+    let completeUrl: string = this.baseUrl + 'planets/schema';
+    return this.getCall(completeUrl);
+  }
+
+  getFilmSchema(): Observable<any> {
+    let completeUrl: string = this.baseUrl + 'films/schema';
+    return this.getCall(completeUrl);
+  }
+
+  getSpecieSchema(): Observable<any> {
+    let completeUrl: string = this.baseUrl + 'species/schema';
+    return this.getCall(completeUrl);
+  }
+
+  getVehicleSchema(): Observable<any> {
+    let completeUrl: string = this.baseUrl + 'vehicles/schema';
+    return this.getCall(completeUrl);
+  }
+
+  getStarshipSchema(): Observable<any> {
+    let completeUrl: string = this.baseUrl + 'starships/schema';
+    return this.getCall(completeUrl);
+  }
+
   private getCall(url: string){
     console.log(url);
     return this.http.get(url)
@@ -127,7 +157,7 @@ export class SwapiService {
     // In a real world app, we might use a remote logging infrastructure
     // We'd also dig deeper into the error to get a better message
     let errMsg = (error.message) ? error.message :
-    error.status ? `${error.status} - ${error.statusText}` : 'Server error';
+    error.status ? `${error.status} - ${error._body}` : 'Server error';
     console.error(errMsg); // log to console instead
     return Observable.throw(errMsg);
   }

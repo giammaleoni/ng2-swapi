@@ -29,6 +29,12 @@ var ResponseComponent = (function () {
             'vehicle',
             'specie',
             'planet',
+            'person schema',
+            'film schema',
+            'starship schema',
+            'vehicle shcema',
+            'specie schema',
+            'planet schema'
         ];
         this.url = new endpoint_1.Endpoint();
     }
@@ -85,6 +91,30 @@ var ResponseComponent = (function () {
                 break;
             case this.resources[12]:
                 this.swapi.getPlanet(req.index, req.wookiee)
+                    .subscribe(function (res) { _this.res = res; _this.errorMessage = ''; }, function (err) { _this.res = {}; _this.errorMessage = err; });
+                break;
+            case this.resources[13]:
+                this.swapi.getPersonSchema()
+                    .subscribe(function (res) { _this.res = res; _this.errorMessage = ''; }, function (err) { _this.res = {}; _this.errorMessage = err; });
+                break;
+            case this.resources[14]:
+                this.swapi.getFilmSchema()
+                    .subscribe(function (res) { _this.res = res; _this.errorMessage = ''; }, function (err) { _this.res = {}; _this.errorMessage = err; });
+                break;
+            case this.resources[15]:
+                this.swapi.getStarshipSchema()
+                    .subscribe(function (res) { _this.res = res; _this.errorMessage = ''; }, function (err) { _this.res = {}; _this.errorMessage = err; });
+                break;
+            case this.resources[16]:
+                this.swapi.getVehicleSchema()
+                    .subscribe(function (res) { _this.res = res; _this.errorMessage = ''; }, function (err) { _this.res = {}; _this.errorMessage = err; });
+                break;
+            case this.resources[17]:
+                this.swapi.getSpecieSchema()
+                    .subscribe(function (res) { _this.res = res; _this.errorMessage = ''; }, function (err) { _this.res = {}; _this.errorMessage = err; });
+                break;
+            case this.resources[18]:
+                this.swapi.getPlanetSchema()
                     .subscribe(function (res) { _this.res = res; _this.errorMessage = ''; }, function (err) { _this.res = {}; _this.errorMessage = err; });
                 break;
             default:
