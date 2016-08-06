@@ -4,8 +4,10 @@
   "description": "Angular2 Service for Star Wars API",
   "main": "index.js",
   "scripts": {
-    "test": "test",
-    "pubblica": "npm publish && cd ./example && npm install ng2-swapi --save"
+    "pubblica": "npm publish && cd ./example && npm install ng2-swapi --save",
+    "test": "karma start",
+    "posttest": "node_modules/.bin/remap-istanbul -i coverage/coverage-final.json -o coverage -t html",
+    "coverage": "http-server -c-1 -o -p 9875 ./coverage"
   },
   "repository": {
     "type": "git",
@@ -33,18 +35,26 @@
     "@angular/router": "3.0.0-beta.1",
     "@angular/router-deprecated": "2.0.0-rc.2",
     "@angular/upgrade": "2.0.0-rc.4",
-    "systemjs": "0.19.27",
+    "angular2-in-memory-web-api": "0.0.14",
+    "bootstrap": "^3.3.6",
     "core-js": "^2.4.0",
     "reflect-metadata": "^0.1.3",
     "rxjs": "5.0.0-beta.6",
-    "zone.js": "^0.6.12",
-    "angular2-in-memory-web-api": "0.0.14",
-    "bootstrap": "^3.3.6"
+    "systemjs": "0.19.27",
+    "zone.js": "^0.6.12"
   },
   "devDependencies": {
     "concurrently": "^2.0.0",
+    "jasmine-core": "~2.4.1",
+    "jasmine-spec-reporter": "^2.5.0",
+    "karma": "~0.13.22",
+    "karma-chrome-launcher": "~1.0.1",
+    "karma-coverage": "^1.1.0",
+    "karma-jasmine": "~1.0.2",
+    "karma-mocha-reporter": "^2.0.4",
     "lite-server": "^2.2.0",
+    "systemjs": "^0.19.27",
     "typescript": "^1.8.10",
-    "typings":"^1.0.4"
+    "typings": "^1.0.4"
   }
 }
