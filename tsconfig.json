@@ -8,5 +8,10 @@
     "experimentalDecorators": true,
     "removeComments": false,
     "noImplicitAny": false
-  }
+  },
+  "exclude": [
+        "test/",
+        "example/",
+        "index.spec.ts"
+    ]
 }
