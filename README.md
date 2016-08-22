@@ -126,5 +126,8 @@ Original documentation at [https://swapi.co/documentation](https://swapi.co/docu
 ## Designer
 [Gianmaria Leoni](https://github.com/giammaleoni)
 
+## Full working Example
+View README in `example\` folder
+
 # ToDo
   - Testing
