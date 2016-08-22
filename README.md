@@ -1,7 +1,4 @@
-# Angular2 Service for Star Wars API
-# ATTENTION! Service & Documentation still in progress
-
-It uses [Star Wars API](https://swapi.co/) by Paul Hallet
+# Angular2 Service for [Star Wars API](https://swapi.co/)
 
 ## Installation
 Run `npm install ng2-swapi --save` to install and add to your dependencies
@@ -123,9 +120,8 @@ Returns
 - `err` string - contain the error if something wrong occurred
 
 ### Original documentation
-Original documentation at [https://swapi.co/documentation](https://swapi.co/documentation).
-
-AngularJS version [here](https://github.com/unshift-devs/xyz-angular-swapi) by [unshift-devs](https://github.com/unshift-devs)
+Original documentation at [https://swapi.co/documentation](https://swapi.co/documentation)
+[Star Wars API](https://swapi.co/) by [Paul Hallet](http://phalt.co/)
 
 ## Designer
 [Gianmaria Leoni](https://github.com/giammaleoni)
