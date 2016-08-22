@@ -6,21 +6,22 @@ Run `npm install ng2-swapi --save` to install and add to your dependencies
 ### Installation optional
 Depending on your actual settings you may need to:
 - Add `ng2-swapi` path in your `map` object in `system.config.js`
- ```
+```
  var map = {
    'app':         'app',
    ...
    'ng2-swapi':   'node_modules/ng2-swapi'
  };
- ```
+```
+
 - Add `ng2-swapi` package in your `packages` object in `system.config.js`
-  ```
+```
   var packages = {
     'app':       { main: 'main.js',  defaultExtension: 'js' },
     ...
     'ng2-swapi': { main: 'index.js', defaultExtension: 'js' }
   };
-  ```
+```
 
 ## Using
 1.  Import SwapiService Component
