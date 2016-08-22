@@ -121,8 +121,10 @@ Returns
 - `err` string - contain the error if something wrong occurred
 
 ### Original documentation
-Original documentation at [https://swapi.co/documentation](https://swapi.co/documentation)
-[Star Wars API](https://swapi.co/) by [Paul Hallet](http://phalt.co/)
+Original documentation of [Star Wars API](https://swapi.co/) by [Paul Hallet](http://phalt.co/)
+
+at [https://swapi.co/documentation](https://swapi.co/documentation)
+
 
 ## Designer
 [Gianmaria Leoni](https://github.com/giammaleoni)
