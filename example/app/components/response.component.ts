@@ -30,7 +30,7 @@ export class ResponseComponent {
     'person schema',
     'film schema',
     'starship schema',
-    'vehicle shcema',
+    'vehicle schema',
     'specie schema',
     'planet schema'
   ];
